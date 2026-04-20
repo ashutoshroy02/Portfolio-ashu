@@ -28,4 +28,4 @@ A modern, responsive portfolio website showcasing my skills as an AI/ML Engineer
 AI/ML Engineer experienced in Machine Learning, NLP, and LLM-based systems. Research Intern at IIT Delhi working on OCR and RAG pipelines. Proficient in Python, PyTorch, Hugging Face, OpenCV, and FastAPI.
 
 ## 🚀 Live Demo
-[Visit Portfolio](https://ashutoshroy-portfolio.netlify.app/)
+[Visit Portfolio](https://mitovoid.netlify.app/)
