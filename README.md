@@ -1,7 +1,5 @@
-# 🚀 Vishal Patel - Portfolio
-A modern, responsive portfolio website showcasing my skills as a Web and AI/ML Developer. Built with pure HTML, CSS, and JavaScript.
-
-![portfolio](https://github.com/user-attachments/assets/f59815d2-733f-4cbe-ba6a-95fe0a437e21)
+# 🚀 Ashutosh Roy - Portfolio
+A modern, responsive portfolio website showcasing my skills as an AI/ML Engineer & Full Stack Developer. Built with pure HTML, CSS, and JavaScript.
 
 ## ✨ Features
 - **Dark/Light Mode** - Toggle between themes with persistent preferences
@@ -21,10 +19,13 @@ A modern, responsive portfolio website showcasing my skills as a Web and AI/ML D
 
 ## 🎯 Sections
 - **Home** - Hero section with typing animation
-- **About** - Personal introduction and skills overview
-- **Projects** - Showcase of ML and web development projects
+- **About** - Personal introduction and experience overview
+- **Projects** - Showcase of ML/AI, NLP, and LLM projects
 - **Skills** - Technical skills grid with hover effects
 - **Contact** - Contact form and social links
 
+## 👨‍💻 About Me
+AI/ML Engineer experienced in Machine Learning, NLP, and LLM-based systems. Research Intern at IIT Delhi working on OCR and RAG pipelines. Proficient in Python, PyTorch, Hugging Face, OpenCV, and FastAPI.
+
 ## 🚀 Live Demo
-[Visit Portfolio](https://vishalpatelportfolio.netlify.app/)
+[Visit Portfolio](https://ashutoshroy-portfolio.netlify.app/)

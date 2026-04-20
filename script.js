@@ -154,10 +154,10 @@ themeToggle.addEventListener('click', () => {
 
 const typingText = document.querySelector('.typing-text');
 const phrases = [
-    'Web and AI/ML Developer',
-    'AI Enthusiast',
-    'Problem Solver',
-    'Creative Thinker'
+    'AI/ML Engineer',
+    'NLP & LLM Specialist',
+    'Research Intern @ IIT Delhi',
+    'Full Stack AI Developer'
 ];
 
 let phraseIndex = 0;
