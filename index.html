@@ -527,9 +527,9 @@
             <h2 class="section__title">Get In Touch</h2>
             <p class="section__subtitle">Let's work together</p>
 
-            <div class="contact__container">
-                <div class="contact__info">
-                    <div class="contact__card glass-card">
+            <div class="contact__container" style="display: flex; justify-content: center;">
+                <div class="contact__info" style="flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%;">
+                    <div class="contact__card glass-card" style="flex: 1; min-width: 280px; max-width: 350px;">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
                         <p>ashu2003roy@gmail.com</p>
@@ -538,62 +538,16 @@
                         </a>
                     </div>
 
-                    <div class="contact__card glass-card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Location</h3>
-                        <p>Gurugram, Haryana, India</p>
-                        <a href="https://www.google.com/maps/place/Gurugram,+Haryana/" target="_blank" rel="noopener noreferrer" class="contact__button">
-                            View Map <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="contact__card glass-card">
-                        <i class="fas fa-phone"></i>
-                        <h3>Phone</h3>
+                    <div class="contact__card glass-card" style="flex: 1; min-width: 280px; max-width: 350px;">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
                         <p>+91 98105 99837</p>
-                        <a href="tel:+919810599837" class="contact__button">
-                            Call Now <i class="fas fa-arrow-right"></i>
+                        <a href="https://wa.me/919810599837" target="_blank" class="contact__button">
+                            Message Me <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
+
                 </div>
-
-                <form class="contact__form glass-card" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="contact">
-                    <input type="hidden" name="bot-field">
-                    
-                    <div class="form__group">
-                        <label for="name" class="form__label">Full Name *</label>
-                        <input type="text" id="name" name="name" class="form__input" placeholder="Enter your name" required>
-                        <span class="form__error"></span>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="email" class="form__label">Email Address *</label>
-                        <input type="email" id="email" name="email" class="form__input" placeholder="Enter your email" required>
-                        <span class="form__error"></span>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="subject" class="form__label">Subject *</label>
-                        <input type="text" id="subject" name="subject" class="form__input" placeholder="Enter subject" required>
-                        <span class="form__error"></span>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="message" class="form__label">Message *</label>
-                        <textarea id="message" name="message" class="form__input form__textarea" placeholder="Enter your message" rows="5" required></textarea>
-                        <span class="form__error"></span>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-block">
-                        <span class="btn__text">Send Message</span>
-                        <span class="btn__loader" style="display: none;">
-                            <i class="fas fa-spinner fa-spin"></i>
-                        </span>
-                    </button>
-
-                    <div class="form__message" style="display: none;"></div>
-                </form>
             </div>
         </div>
     </section>
