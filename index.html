@@ -180,7 +180,7 @@
                     <a href="https://www.instagram.com/atrexplains/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="mailto:ashu2003roy@gmail.com" target="_blank" rel="noopener noreferrer" onclick="navigator.clipboard.writeText('ashu2003roy@gmail.com');" class="social-link" aria-label="Email">
+                    <a href="mailto:ashu2003roy@gmail.com" target="_blank" rel="noopener noreferrer" onclick="copyEmail(event, 'ashu2003roy@gmail.com');" class="social-link" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -533,7 +533,7 @@
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
                         <p>ashu2003roy@gmail.com</p>
-                        <a href="mailto:ashu2003roy@gmail.com" target="_blank" rel="noopener noreferrer" onclick="navigator.clipboard.writeText('ashu2003roy@gmail.com');" class="contact__button">
+                        <a href="mailto:ashu2003roy@gmail.com" target="_blank" rel="noopener noreferrer" onclick="copyEmail(event, 'ashu2003roy@gmail.com');" class="contact__button">
                             Send Email <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -591,7 +591,7 @@
                         <a href="https://www.instagram.com/atrexplains/" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="mailto:ashu2003roy@gmail.com" target="_blank" rel="noopener noreferrer" onclick="navigator.clipboard.writeText('ashu2003roy@gmail.com');" class="footer__social" aria-label="Email">
+                        <a href="mailto:ashu2003roy@gmail.com" target="_blank" rel="noopener noreferrer" onclick="copyEmail(event, 'ashu2003roy@gmail.com');" class="footer__social" aria-label="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -610,6 +610,29 @@
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <script>
+        function copyEmail(e, email) {
+            navigator.clipboard.writeText(email);
+            const toast = document.createElement('div');
+            toast.textContent = 'Copied text';
+            toast.style.position = 'fixed';
+            toast.style.bottom = '20px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.background = 'var(--primary-color, #6366f1)';
+            toast.style.color = 'white';
+            toast.style.padding = '10px 20px';
+            toast.style.borderRadius = '5px';
+            toast.style.zIndex = '10000';
+            toast.style.transition = 'opacity 0.3s';
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 1000);
+        }
+    </script>
 
     <script src="script.js"></script>
 </body>
