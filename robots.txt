@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Allow: /resume/
 
 Sitemap: https://mitovoid.netlify.app/sitemap.xml

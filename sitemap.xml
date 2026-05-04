@@ -2,8 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mitovoid.netlify.app/</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mitovoid.netlify.app/resume/ML_AI_Engineer_Ashutosh.pdf</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mitovoid.netlify.app/resume/Data_Scientist_Ashutosh.pdf</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mitovoid.netlify.app/resume/Python_Developer_Ashutosh.pdf</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mitovoid.netlify.app/resume/Researcher_Ashutosh.pdf</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
