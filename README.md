@@ -1,5 +1,5 @@
 # 🚀 Ashutosh Roy - Portfolio
-A modern, responsive portfolio website showcasing my skills as an AI/ML Engineer & Full Stack Developer. Built with pure HTML, CSS, and JavaScript.
+A modern, responsive portfolio website showcasing my skills as an AI/ML Engineer, AI Agent Developer, and Full Stack Developer. Built with pure HTML, CSS, and JavaScript.
 
 ## ✨ Features
 - **Dark/Light Mode** - Toggle between themes with persistent preferences
@@ -25,7 +25,7 @@ A modern, responsive portfolio website showcasing my skills as an AI/ML Engineer
 - **Contact** - Contact form and social links
 
 ## 👨‍💻 About Me
-AI/ML Engineer experienced in Machine Learning, NLP, and LLM-based systems. Research Intern at IIT Delhi working on OCR and RAG pipelines. Proficient in Python, PyTorch, Hugging Face, OpenCV, and FastAPI.
+AI/ML Engineer experienced in Machine Learning, NLP, LLM-based systems, and AI Agent development. Research Intern at IIT Delhi working on OCR and RAG pipelines. Proficient in Python, PyTorch, Hugging Face, OpenCV, FastAPI, and building autonomous AI agents with LangGraph and MCP.
 
 ## 🚀 Live Demo
 [Visit Portfolio](https://mitovoid.netlify.app/)
