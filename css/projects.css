@@ -1,0 +1,362 @@
+/* =============================================
+   PROJECTS — cards, filters, lightbox, modals
+   ============================================= */
+
+/* ── Filter buttons ── */
+.projects__filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-weight: 600;
+    transition: all var(--transition-base);
+}
+.filter-btn:hover, .filter-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ── Project grid ── */
+.projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.project__card {
+    padding: 0;
+    overflow: hidden;
+    transition: all var(--transition-base);
+    animation: projectFadeIn 0.5s ease;
+}
+@keyframes projectFadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to   { opacity: 1; transform: scale(1); }
+}
+.project__card.hide { display: none; }
+.project__card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); }
+
+.project__image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+.project__img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+.project__card:hover .project__img { transform: scale(1.1); }
+
+.project__overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(201,168,76,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+.project__card:hover .project__overlay { opacity: 1; }
+
+.project__btn {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: white;
+    color: var(--primary-color);
+    display: flex; align-items: center; justify-content: center;
+    transition: all var(--transition-base);
+}
+.project__btn:hover { transform: scale(1.2) rotate(360deg); }
+
+.project__content { padding: 1.5rem; }
+.project__title { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--text-primary); }
+.project__description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.project__tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag {
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* ── Lightbox (legacy) ── */
+.lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.lightbox.active { display: flex; }
+.lightbox__content {
+    position: relative;
+    max-width: 90%; max-height: 90%;
+    animation: lightboxZoom 0.3s ease;
+}
+@keyframes lightboxZoom {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+.lightbox__close {
+    position: absolute;
+    top: -40px; right: 0;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: white;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: all var(--transition-base);
+}
+.lightbox__close:hover { transform: rotate(90deg); background: var(--primary-color); color: white; }
+.lightbox__img {
+    max-width: 100%;
+    max-height: calc(90vh - 60px);
+    border-radius: var(--radius-lg);
+}
+.lightbox__caption { text-align: center; color: white; margin-top: 1rem; font-size: 1.1rem; }
+
+/* ── Project detail modal (pmodal) ── */
+.pmodal { position: fixed; inset: 0; z-index: 10002; display: none; }
+.pmodal.active { display: block; }
+
+.pmodal__overlay {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.pmodal__container {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+    animation: modalSlideUp 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+@keyframes modalSlideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+.pmodal__header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 2;
+}
+.pmodal__nav { display: flex; align-items: center; gap: 1rem; }
+.pmodal__arrow {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    display: flex; align-items: center; justify-content: center;
+    border: none; cursor: pointer;
+    transition: all 0.3s ease;
+}
+.pmodal__arrow:hover { background: var(--primary-color); color: white; transform: scale(1.1); }
+.pmodal__counter { font-size: 0.9rem; color: var(--text-secondary); font-weight: 600; }
+.pmodal__close {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    display: flex; align-items: center; justify-content: center;
+    border: none; cursor: pointer;
+    transition: all 0.3s ease;
+}
+.pmodal__close:hover { background: #ef4444; color: white; transform: rotate(90deg); }
+
+.pmodal__body {
+    flex: 1; overflow-y: auto;
+    padding: 3rem 2rem;
+    background: var(--bg-primary);
+    scroll-behavior: smooth;
+}
+.pmodal__hero { max-width: 800px; margin: 0 auto 3rem; text-align: center; }
+.pmodal__hero h2 {
+    font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.pmodal__hero .pmodal__tagline { font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+.pmodal__sections {
+    max-width: 800px; margin: 0 auto;
+    display: flex; flex-direction: column; gap: 2.5rem;
+}
+.pmodal__section {
+    opacity: 0; transform: translateY(20px);
+    animation: pmodalFadeIn 0.5s ease forwards;
+}
+.pmodal__section:nth-child(1) { animation-delay: 0.1s; }
+.pmodal__section:nth-child(2) { animation-delay: 0.2s; }
+.pmodal__section:nth-child(3) { animation-delay: 0.3s; }
+.pmodal__section:nth-child(4) { animation-delay: 0.4s; }
+.pmodal__section:nth-child(5) { animation-delay: 0.5s; }
+.pmodal__section:nth-child(6) { animation-delay: 0.6s; }
+@keyframes pmodalFadeIn { to { opacity: 1; transform: translateY(0); } }
+
+.pmodal__section h3 {
+    font-size: 1.1rem; font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 0.5rem;
+}
+.pmodal__section p { color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem; }
+.pmodal__badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pmodal__badge {
+    padding: 0.4rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.pmodal__links { display: flex; gap: 1rem; flex-wrap: wrap; }
+.pmodal__links a {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-full);
+    font-weight: 600; font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.pmodal__links .pmodal__github {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--glass-border);
+}
+.pmodal__links .pmodal__github:hover { background: #333; color: white; }
+.pmodal__links .pmodal__casestudy {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+}
+.pmodal__links .pmodal__casestudy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(201,168,76,0.4);
+}
+
+/* Demo section */
+.pmodal__demo {
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem; text-align: center;
+}
+.pmodal__demo-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white; border: none;
+    border-radius: var(--radius-full);
+    font-weight: 600; cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+.pmodal__demo-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(16,185,129,0.4); }
+.pmodal__demo-output {
+    margin-top: 1.5rem; padding: 1rem;
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+    font-family: var(--font-code);
+    font-size: 0.9rem; color: var(--text-primary);
+    display: none;
+}
+.pmodal__demo-output.active { display: block; }
+
+@media screen and (max-width: 768px) {
+    .pmodal__body { padding: 2rem 1rem; }
+    .pmodal__hero h2 { font-size: 1.6rem; }
+    .pmodal__header { padding: 0.75rem 1rem; }
+}
+
+/* ── Case study modal (csmodal) ── */
+.csmodal { position: fixed; inset: 0; z-index: 10003; display: none; }
+.csmodal.active { display: block; }
+
+.csmodal__overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.9); }
+.csmodal__container {
+    position: absolute; inset: 0;
+    overflow-y: auto;
+    padding: 4rem 2rem;
+    background: var(--bg-primary);
+    animation: modalSlideUp 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.csmodal__close {
+    position: fixed;
+    top: 1.5rem; right: 1.5rem;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    display: flex; align-items: center; justify-content: center;
+    border: none; cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: var(--shadow-lg);
+}
+.csmodal__close:hover { background: #ef4444; color: white; transform: rotate(90deg); }
+.csmodal__body { max-width: 700px; margin: 0 auto; }
+.csmodal__body h2 {
+    font-size: 2.2rem; font-weight: 800; margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.cs__section {
+    margin-bottom: 2.5rem;
+    opacity: 0; transform: translateY(20px);
+    animation: pmodalFadeIn 0.6s ease forwards;
+}
+.cs__section:nth-child(2) { animation-delay: 0.1s; }
+.cs__section:nth-child(3) { animation-delay: 0.2s; }
+.cs__section:nth-child(4) { animation-delay: 0.3s; }
+.cs__section:nth-child(5) { animation-delay: 0.4s; }
+.cs__section:nth-child(6) { animation-delay: 0.5s; }
+.cs__section:nth-child(7) { animation-delay: 0.6s; }
+.cs__section h3 {
+    font-size: 1.15rem; font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--glass-border);
+}
+.cs__section p { color: var(--text-secondary); line-height: 1.8; }
+.cs__insight {
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(212,184,90,0.08));
+    border-left: 3px solid var(--primary-color);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 1rem 0;
+    font-style: italic;
+    color: var(--text-primary);
+}

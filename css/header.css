@@ -1,0 +1,103 @@
+/* =============================================
+   HEADER & NAVIGATION
+   ============================================= */
+
+.header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 1000;
+    transition: all var(--transition-base);
+}
+.header.scroll-header { box-shadow: var(--shadow-md); }
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: var(--font-code);
+}
+.logo-bracket { color: var(--primary-color); }
+
+.nav__list {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    position: relative;
+}
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem; left: 0;
+    width: 0; height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: width var(--transition-base);
+}
+.nav__link:hover, .nav__link.active-link { color: var(--primary-color); }
+.nav__link:hover::after, .nav__link.active-link::after { width: 100%; }
+
+.nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+}
+.theme-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+    background: var(--primary-color);
+    color: white;
+}
+
+.nav__toggle, .nav__close {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 80%; height: 100vh;
+        background: var(--bg-primary);
+        padding: 6rem 2rem 2rem;
+        transition: right var(--transition-base);
+        box-shadow: var(--shadow-xl);
+    }
+    .nav__menu.show-menu { right: 0; }
+    .nav__list { flex-direction: column; gap: 2rem; }
+    .nav__link { font-size: 1.25rem; }
+    .nav__close {
+        display: block;
+        position: absolute;
+        top: 1.5rem; right: 1.5rem;
+    }
+    .nav__toggle { display: block; }
+}

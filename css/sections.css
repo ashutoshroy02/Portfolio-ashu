@@ -1,0 +1,219 @@
+/* =============================================
+   ABOUT, SKILLS, CONTACT, FOOTER
+   ============================================= */
+
+/* ── About ── */
+.about { background: var(--bg-secondary); }
+
+.about__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+}
+.about__img-wrapper { padding: 1.5rem; }
+.about__img { width: 100%; border-radius: var(--radius-lg); }
+
+.about__text { padding: 2rem; }
+.about__subtitle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.about__description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+.download-cv { margin-top: 2rem; }
+
+@media screen and (max-width: 968px) {
+    .about__container { grid-template-columns: 1fr; }
+}
+
+/* ── Skills ── */
+.skills { background: var(--bg-secondary); }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    padding: 2rem 1.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+}
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.1), transparent);
+    transition: left 0.5s ease;
+}
+.skill-card:hover::before { left: 100%; }
+.skill-card.animate { animation: fadeInUp 0.6s ease forwards; }
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(201,168,76,0.3);
+    border-color: var(--primary-color);
+}
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: block;
+    transition: all var(--transition-base);
+}
+.skill-card:hover i {
+    transform: scale(1.2) rotateY(360deg);
+    color: var(--accent-color);
+}
+.skill-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+.skill-card:hover h3 { color: var(--primary-color); }
+body.dark-mode .skill-card { background: rgba(30,41,59,0.7); }
+
+@media screen and (max-width: 768px) {
+    .skills-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
+    .skill-card   { padding: 1.5rem 1rem; }
+    .skill-card i { font-size: 2rem; }
+    .skill-card h3 { font-size: 0.9rem; }
+}
+@media screen and (max-width: 480px) {
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Contact ── */
+.contact__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.contact__card {
+    padding: 2rem;
+    text-align: center;
+    transition: all var(--transition-base);
+}
+.contact__card:hover { transform: translateY(-10px); }
+.contact__card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.contact__card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.contact__card p  { color: var(--text-secondary); margin-bottom: 1rem; }
+.contact__button {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-base);
+}
+.contact__button:hover { gap: 1rem; }
+
+.contact__form { padding: 2.5rem; }
+.form__group   { margin-bottom: 1.5rem; }
+.form__label   { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-primary); }
+.form__input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all var(--transition-base);
+}
+.form__input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+}
+.form__textarea { resize: vertical; min-height: 120px; }
+.form__error { display: block; color: #ef4444; font-size: 0.875rem; margin-top: 0.5rem; }
+.form__message {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-top: 1rem;
+    text-align: center;
+}
+.form__message.success { background: #dcfce7; color: #166534; }
+body.dark-mode .form__message.success { background: #064e3b; color: #86efac; }
+.form__message.error { background: #fee2e2; color: #991b1b; }
+body.dark-mode .form__message.error { background: #7f1d1d; color: #fca5a5; }
+
+@media screen and (max-width: 968px) {
+    .contact__container { grid-template-columns: 1fr; }
+}
+
+/* ── Footer ── */
+.footer { background: var(--bg-secondary); padding: 3rem 0 1.5rem; }
+
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+.footer__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-code);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.footer__description { color: var(--text-secondary); line-height: 1.8; }
+.footer__title       { font-size: 1.25rem; margin-bottom: 1rem; }
+.footer__links       { display: flex; flex-direction: column; gap: 0.75rem; }
+.footer__link        { color: var(--text-secondary); transition: all var(--transition-fast); }
+.footer__link:hover  { color: var(--primary-color); padding-left: 0.5rem; }
+
+.footer__socials { display: flex; gap: 1rem; }
+.footer__social {
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-primary);
+    transition: all var(--transition-base);
+}
+.footer__social:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+}
+.footer__bottom {
+    padding-top: 2rem;
+    border-top: 1px solid var(--bg-tertiary);
+}
+.footer__copy { text-align: center; color: var(--text-secondary); }
+.footer__copy i { color: #ef4444; animation: heartbeat 1.5s infinite; }
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.2); }
+}
