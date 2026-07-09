@@ -438,7 +438,7 @@ const resumeModalDownload = document.getElementById('resume-modal-download');
 const resumeModalClose = document.getElementById('resume-modal-close');
 const resumeFallback = document.getElementById('resume-fallback');
 
-let currentResumePdf = 'resume/ML_AI_Engineer_Ashutosh.pdf';
+let currentResumePdf = 'new_resume/ai_ml_engineer.pdf';
 let currentRoleName = 'AI/ML Engineer';
 
 // Role switching
