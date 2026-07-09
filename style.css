@@ -2145,4 +2145,16 @@ body.dark-mode .form__message.error {
         transition-duration: 0.01ms !important;
     }
     .cursor, .cursor-follower { display: none !important; }
-}
+}
+
+
+/* ── Hero override: centered single-column ── */
+.hero__container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    grid-template-columns: unset !important;
+}
+.hero__image { display: none !important; }
