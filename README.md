@@ -9,7 +9,7 @@
 
 I'm Ashutosh Roy — an AI/ML Engineer focused on building production-ready systems with LLMs, RAG pipelines, NLP, and Computer Vision. I did my research internship at IIT Delhi where I worked on OCR and retrieval systems for large-scale document understanding, and co-authored a paper accepted at RECCAP 2026.
 
-I'm currently pursuing BTech (Hons) in CSE - AI from CSVTU, Bhilai. Outside of AI, I play badminton, run a YouTube channel, and post tech insights on Instagram [@atrexplains](https://www.instagram.com/atrexplains/).
+I'm currently pursuing BTech (Hons) in CSE - AI from CSVTU, Bhilai. Outside of AI, I play badminton, run a YouTube channel, and post tech insights .
 
 ---
 
