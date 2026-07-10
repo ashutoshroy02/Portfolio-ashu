@@ -7,7 +7,7 @@ const roleNames = {
     'ml': 'AI/ML Engineer',
     'ds': 'Data Scientist',
     'py': 'Python Developer',
-    'cv': 'CV Researcher',
+    'cv': 'AI/ML Researcher',
     'ai': 'AI Agent Developer',
     'fs': 'Full Stack Developer',
 };
