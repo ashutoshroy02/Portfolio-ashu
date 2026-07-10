@@ -1,74 +1,98 @@
 # Ashutosh Roy — Portfolio
 
-> AI/ML Engineer · NLP & LLM Specialist · Research Intern @ IIT Delhi  
+> AI/ML Engineer · Computer Vision · LLM Systems · Published Researcher  
 > Live at [mitovoid.netlify.app](https://mitovoid.netlify.app)
 
 ---
 
 ## Who I am
 
-I'm Ashutosh Roy — an AI/ML Engineer focused on building production-ready systems with LLMs, RAG pipelines, NLP, and Computer Vision. I did my research internship at IIT Delhi where I worked on OCR and retrieval systems for large-scale document understanding, and co-authored a paper accepted at RECCAP 2026.
+Started in Faridabad. Gave JEE, cleared Mains, hit a wall at Advanced. Took a drop year. That stubbornness never left.
 
-I'm currently pursuing BTech (Hons) in CSE - AI from CSVTU, Bhilai. Outside of AI, I play badminton, run a YouTube channel, and post tech insights .
+Studied CSE - AI at CSVTU, Bhilai. Picked up Python, went deep into ML, and cracked a research internship at IIT Delhi under Prof. Maya Ramanath — where I built OCR pipelines, benchmarked OCR engines, and designed the hybrid search-retrieval system for the [SARCH project](https://arxiv.org/abs/2511.05667). Co-authored the paper with the IIT team.
+
+Final year: co-authored a second paper on speech emotion and stress detection, published in IEEE Xplore at RECCAP 2026. Built AI agents, RAG systems, got obsessed with audio and vision models, reverse-engineered how AI music generation works.
+
+Now quietly building **MITOVOID AI** — a startup, one late night at a time.
 
 ---
 
 ## What this portfolio is
 
-This is my personal portfolio — built from scratch, no frameworks, no templates. Every animation, interaction, and design decision is mine. I built it to show engineering craft, not just list skills.
-
-The site features a dark glassmorphism design with a gold accent system, a custom sword cursor, 3D card tilts, magnetic buttons, and a fully centered animated hero. You can switch between 6 role-specific resumes, explore my projects in detail with case studies, and use keyboard shortcuts to navigate the whole thing.
+Built from scratch — no frameworks, no templates. Minimal design, star cursor trail, multi-role resume selector, project modals with case studies, anonymous contact form (Netlify Functions + Resend), keyboard shortcuts, dark/light mode.
 
 ---
 
-## Projects I've worked on
+## Projects
 
-**Speech Emotion & Stress Detection** — Built a multitask Wav2Vec2 + BiLSTM model for joint emotion classification and stress regression across 3 audio datasets. Achieved 85.9% accuracy. Paper accepted at RECCAP 2026, IIT Palakkad.
-
-**Archaeological Search Engine (IIT Delhi)** — Built SARCH, a multimodal retrieval pipeline combining OCR (Tesseract, Marker, Gemini) with hybrid search (FAISS + Apache Solr) over 10,000+ scanned archaeological documents. Co-authored with IIT Delhi.
-
-**Exam-Helper RAG** — LLM-based study assistant using LLaMA 3 with multimodal ingestion from PDFs, images, and YouTube. Powered by FAISS/Pinecone and Groq API.
-
-**Medical Chatbot** — Fine-tuned Mistral 7B with QLoRA for healthcare NLP. Built an OCR pipeline for medical reports. Reduced patient query resolution time by ~40%.
-
-**BeatBubble — Music Identification** — Real-time song recognition using ACRCloud fingerprinting. Identifies songs in under 3 seconds, works with ambient noise, deployed on web and mobile.
-
-**This Portfolio** — You're looking at it.
+| Project | Stack | Highlight |
+|---|---|---|
+| [Archaeological Search Engine](https://github.com/ashutoshroy02/IITDTIE) | Python, Surya OCR, FAISS, Apache Solr, FastAPI | IIT Delhi · co-authored [SARCH paper](https://arxiv.org/abs/2511.05667) |
+| [Speech Emotion & Stress Detection](https://github.com/ashutoshroy02/emotion-stress-ml) | PyTorch, Wav2Vec2, BiLSTM | 85.9% acc · IEEE RECCAP 2026 |
+| [Exam-Helper Agentic RAG](https://github.com/ashutoshroy02/Exam-Helper) | LLaMA 3, LangGraph, FAISS, Pinecone | ~40% hallucination reduction |
+| [Medical Chatbot](https://github.com/ashutoshroy02/Medical-chatbot) | Mistral 7B, QLoRA, Tesseract OCR | 75% GPU memory reduction |
+| [Industrial Defect Detection](https://github.com/ashutoshroy02/Industrial-Defect-Detection-System) | YOLOv8, PyTorch, CUDA | Real-time manufacturing QA |
+| [Skills-for-Agents](https://github.com/ashutoshroy02/skills-for-agents) | LangGraph, MCP, SIP Protocol | Open-source modular agent skills |
+| [Shopping Assistant Agent](https://github.com/ashutoshroy02/shopping-assistant-agent-) | LangGraph, MCP, Claude 3.5 | Multi-agent product search |
+| [InterviewPrep](https://github.com/ashutoshroy02/InterviewPrep) | Astro, FastAPI, SEO | 700+ AI/ML questions · 95+ Lighthouse |
+| [BulkyMail](https://github.com/ashutoshroy02/BULK-MAIL) | Python, Streamlit, SMTP | 100+ personalized emails in minutes |
+| [URL Shortener (Chota-link)](https://github.com/ashutoshroy02/Chota-link) | FastAPI, Redis, PostgreSQL, Docker | ~40% faster via Redis cache |
+| [Netflix Data Analysis](https://github.com/ashutoshroy02/Netflix-Data-Analysis) | Pandas, Seaborn, Jupyter | EDA on 8,000+ titles |
+| [BeatBubble](https://github.com/ashutoshroy02/Beat-Bubble) | Python, ACRCloud, Streamlit | Song ID in under 3 seconds |
 
 ---
 
-## My skills
+## Skills
 
-Python, PyTorch, TensorFlow, Hugging Face, NLP & LLMs, OpenCV, scikit-learn, FastAPI, FAISS, Pinecone, Docker, Streamlit, Git, C++, Transformers, RAG Systems, AI Agents, LangChain, LlamaIndex, LangGraph, MCP.
+Python · PyTorch · TensorFlow · Hugging Face · NLP & LLMs · Computer Vision · OpenCV · scikit-learn · FastAPI · FAISS · Pinecone · Docker · Streamlit · LangChain · LangGraph · MCP · RAG Systems · AI Agents · LlamaIndex · C++ · Git
 
 ---
 
 ## Resumes
 
-I have 6 role-specific resumes depending on what you're looking for — AI/ML Engineer, Data Scientist, Software Developer, Researcher, AI Agent Engineer, and Full Stack Developer. You can preview and download any of them directly on the site.
+5 role-specific resumes on the site — AI/ML Engineer, Data Scientist, Python Developer, CV Researcher, AI Agent Developer. Preview and download directly.
 
 ---
 
-## Keyboard shortcuts on the site
+## Running locally
 
-Press G to open my GitHub, R to jump to resumes, P to jump to projects, T to toggle dark/light mode, and ESC to close any open modal. Arrow keys navigate between projects when a modal is open.
+No build step. Serve with VS Code Live Server or:
+
+```bash
+python -m http.server 3000
+```
+
+PDF previews require a local server — won't work opening HTML directly.
+
+For the contact form locally, use [Netlify CLI](https://docs.netlify.com/cli/get-started/):
+
+```bash
+npm install -g netlify-cli
+netlify dev
+```
 
 ---
 
-## How to run it locally
+## Contact form setup (for contributors/forks)
 
-No build step. Just serve it with VS Code's Live Server or Python's built-in HTTP server and open it in the browser. The PDF previews need a local server — they won't work if you open the HTML file directly.
+The anonymous contact form uses a Netlify Function + Resend API.
+
+1. Add `RESEND_API_KEY` to Netlify → Site Settings → Environment Variables
+2. Push to GitHub — Netlify auto-deploys the function
+3. Function lives at `netlify/functions/contact.js`
 
 ---
 
-## Contact me
+## Links
 
 - Email — ashu2003roy@gmail.com
 - LinkedIn — [ashutosh-roy-41618b202](https://www.linkedin.com/in/ashutosh-roy-41618b202/)
 - GitHub — [ashutoshroy02](https://github.com/ashutoshroy02)
+- Hugging Face — [ashutoshroy02](https://huggingface.co/ashutoshroy02/)
+- Google Scholar — [profile](https://scholar.google.com/citations?user=JY-y8lEAAAAJ&hl=en)
 - YouTube — [channel](https://www.youtube.com/channel/UCk64HxDSenxzRgqNRUhBq3g/)
 - Instagram — [@atrexplains](https://www.instagram.com/atrexplains/)
 
 ---
 
-© Ashutosh Roy. Made with ❤️
+© Ashutosh Roy · MITOVOID AI · Made with ❤️
