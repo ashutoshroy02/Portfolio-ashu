@@ -133,22 +133,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-const currentTheme = localStorage.getItem('theme') || 'dark';
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-}
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    
-    if (document.body.classList.contains('dark-mode')) {
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        localStorage.setItem('theme', 'dark');
-    } else {
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        localStorage.setItem('theme', 'light');
-    }
-});
+// Theme toggle handled by js/main.js — disabled here to prevent double-firing
+// const currentTheme = localStorage.getItem('theme') || 'dark';
+// if (currentTheme === 'dark') {
+//     document.body.classList.add('dark-mode');
+//     themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+// }
+// themeToggle.addEventListener('click', () => { ... });
 
 
 
