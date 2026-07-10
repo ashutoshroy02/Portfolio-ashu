@@ -340,7 +340,7 @@
 
                 <article class="project__card glass-card" data-category="mobile" data-tilt>
                     <div class="project__image">
-                        <img src="assets/rag_helper.png" alt="Exam-Helper RAG" class="project__img" loading="lazy">
+                        <img src="assets/rag_helper.png" alt="Exam-Helper Agentic RAG" class="project__img" loading="lazy">
                         <div class="project__overlay">
                             <button class="project__btn preview-btn" data-project="3">
                                 <i class="fas fa-eye"></i>
@@ -351,23 +351,21 @@
                         </div>
                     </div>
                     <div class="project__content">
-                        <h3 class="project__title">Exam-Helper RAG</h3>
+                        <h3 class="project__title">Exam-Helper Agentic RAG</h3>
                         <p class="project__description">
-                            Built LLM-based study assistant using LLaMA 3 and RAG architecture. Integrated FAISS/Pinecone for efficient retrieval. Enabled multimodal querying from PDFs, images, and YouTube content for comprehensive exam preparation.
+                            Evolved from plain RAG to Agentic RAG using LangGraph for multi-step context retrieval. LLaMA 3 + FAISS/Pinecone hybrid retrieval, ~40% hallucination reduction, multimodal ingestion (PDFs, images, YouTube).
                         </p>
                         <div class="project__tags">
                             <span class="tag">LLaMA 3</span>
-                            <span class="tag">RAG</span>
+                            <span class="tag">LangGraph</span>
                             <span class="tag">FAISS</span>
                             <span class="tag">Pinecone</span>
-                            <span class="tag">Python</span>
                             <span class="tag">LangChain</span>
+                            <span class="tag">FastAPI</span>
                         </div>
                     </div>
                 </article>
 
-
-    
                 <article class="project__card glass-card" data-category="mobile" data-tilt>
                     <div class="project__image">
                         <img src="assets/medical_chatbot.png" alt="Medical Chatbot" class="project__img" loading="lazy">
@@ -383,7 +381,7 @@
                     <div class="project__content">
                         <h3 class="project__title">Medical Chatbot (LLM)</h3>
                         <p class="project__description">
-                            Fine-tuned Mistral 7B using QLoRA for domain-specific healthcare NLP tasks. Integrated OCR pipeline for extracting insights from medical reports. Built AI chatbot that improved patient query resolution by 40%.
+                            Fine-tuned Mistral 7B using QLoRA (4-bit) — 75% GPU memory reduction. Tesseract OCR pipeline over 1,000+ medical reports. ~40% faster patient query resolution.
                         </p>
                         <div class="project__tags">
                             <span class="tag">Mistral 7B</span>
@@ -395,10 +393,12 @@
                         </div>
                     </div>
                 </article>
-                
-                <article class="project__card glass-card" data-category="design" data-tilt>
+
+                <article class="project__card glass-card" data-category="web" data-tilt>
                     <div class="project__image">
-                        <img src="assets/music_id.png" alt="Music Identification App" class="project__img" loading="lazy">
+                        <div class="project__img-placeholder">
+                            <i class="fas fa-industry"></i>
+                        </div>
                         <div class="project__overlay">
                             <button class="project__btn preview-btn" data-project="5">
                                 <i class="fas fa-eye"></i>
@@ -409,16 +409,215 @@
                         </div>
                     </div>
                     <div class="project__content">
-                        <h3 class="project__title">Music Identification App</h3>
+                        <h3 class="project__title">Industrial Defect Detection</h3>
                         <p class="project__description">
-                           Built real-time audio recognition system using ACRCloud API. Designed end-to-end pipeline: audio capture → feature extraction → matching → metadata retrieval for instant song identification.
+                            Real-time YOLOv8 quality inspection for manufacturing. 4 defect classes, custom dataset, GPU-accelerated inference, automated defect reporting and analytics.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">YOLOv8</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">CUDA</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project__card glass-card" data-category="design" data-tilt>
+                    <div class="project__image">
+                        <div class="project__img-placeholder">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="project__overlay">
+                            <button class="project__btn preview-btn" data-project="6">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <a href="https://github.com/ashutoshroy02" class="project__btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Skills-for-Agents</h3>
+                        <p class="project__description">
+                            Open-source modular instruction ecosystem for multi-task LLM agents. Custom SIP protocol eliminates skill conflicts. ~60% prompt duplication reduction. Production-ready.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">LangGraph</span>
+                            <span class="tag">MCP</span>
+                            <span class="tag">AI Agents</span>
+                            <span class="tag">SIP Protocol</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project__card glass-card" data-category="design" data-tilt>
+                    <div class="project__image">
+                        <div class="project__img-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project__overlay">
+                            <button class="project__btn preview-btn" data-project="7">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <a href="https://github.com/ashutoshroy02" class="project__btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Shopping Assistant Agent</h3>
+                        <p class="project__description">
+                            Multi-agent LangGraph system for product search, comparison, and recommendations. MCP servers for secure tool calling. ~35% faster response vs. single-agent baseline.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">LangGraph</span>
+                            <span class="tag">MCP</span>
+                            <span class="tag">Claude 3.5</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project__card glass-card" data-category="design" data-tilt>
+                    <div class="project__image">
+                        <div class="project__img-placeholder">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project__overlay">
+                            <button class="project__btn preview-btn" data-project="8">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <a href="https://github.com/ashutoshroy02" class="project__btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">InterviewPrep Platform</h3>
+                        <p class="project__description">
+                            700+ curated AI/ML questions. FAANG + Indian IT tracks, 12-week roadmap, flashcards, mock interviews. 95+ Lighthouse score. Open-source static Astro rebuild with SEO optimization.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Astro</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">SEO</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project__card glass-card" data-category="design" data-tilt>
+                    <div class="project__image">
+                        <div class="project__img-placeholder">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div class="project__overlay">
+                            <button class="project__btn preview-btn" data-project="9">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <a href="https://github.com/ashutoshroy02" class="project__btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">BulkyMail</h3>
+                        <p class="project__description">
+                            Automated bulk email with dynamic per-recipient personalization (name, role, company). 100+ emails in minutes. Contributed to internship conversion success for multiple users.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">SMTP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project__card glass-card" data-category="design" data-tilt>
+                    <div class="project__image">
+                        <div class="project__img-placeholder">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="project__overlay">
+                            <button class="project__btn preview-btn" data-project="10">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <a href="https://github.com/ashutoshroy02" class="project__btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">URL Shortener</h3>
+                        <p class="project__description">
+                            Scalable URL shortener with Redis caching (~40% faster), custom short links, analytics, PostgreSQL persistence, Docker deployment.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project__card glass-card" data-category="design" data-tilt>
+                    <div class="project__image">
+                        <div class="project__img-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="project__overlay">
+                            <button class="project__btn preview-btn" data-project="11">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <a href="https://github.com/ashutoshroy02" class="project__btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Netflix Data Analysis</h3>
+                        <p class="project__description">
+                            EDA on 8,000+ Netflix titles. Visualized genre trends, ratings, regional content patterns, and release year distributions for data-driven business insights.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">Seaborn</span>
+                            <span class="tag">Jupyter</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project__card glass-card" data-category="design" data-tilt>
+                    <div class="project__image">
+                        <img src="assets/music_id.png" alt="Music Identification App" class="project__img" loading="lazy">
+                        <div class="project__overlay">
+                            <button class="project__btn preview-btn" data-project="12">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <a href="https://github.com/ashutoshroy02" class="project__btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">BeatBubble — Music ID</h3>
+                        <p class="project__description">
+                            Real-time audio fingerprinting via ACRCloud. Identifies songs in under 3 seconds from ambient audio. Cross-platform: Streamlit web + Flutter mobile.
                         </p>
                         <div class="project__tags">
                             <span class="tag">Python</span>
                             <span class="tag">ACRCloud API</span>
                             <span class="tag">Audio Processing</span>
-                            <span class="tag">REST API</span>
                             <span class="tag">Streamlit</span>
+                            <span class="tag">Flutter</span>
                         </div>
                     </div>
                 </article>
@@ -427,7 +626,7 @@
                     <div class="project__image">
                         <img src="assets/portfolio_site.png" alt="Portfolio Website" class="project__img" loading="lazy">
                         <div class="project__overlay">
-                            <button class="project__btn preview-btn" data-project="6">
+                            <button class="project__btn preview-btn" data-project="13">
                                 <i class="fas fa-eye"></i>
                             </button>
                             <a href="https://github.com/ashutoshroy02/Portfolio-ashu" class="project__btn" target="_blank">
@@ -438,8 +637,7 @@
                     <div class="project__content">
                         <h3 class="project__title">Portfolio Website</h3>
                         <p class="project__description">
-                            Modern, animated portfolio website featuring advanced CSS animations, 
-                            smooth transitions, dark/light mode, and an immersive user experience.
+                            Built from scratch — minimal design, custom cursor, multi-role resume selector, keyboard shortcuts, dark/light mode, SEO optimized.
                         </p>
                         <div class="project__tags">
                             <span class="tag">HTML5</span>
