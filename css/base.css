@@ -169,15 +169,7 @@ body.dark-mode .glass-card { background: rgba(10, 10, 10, 0.9); }
 
 /* ── Custom cursor ── */
 .cursor {
-    width: 32px; height: 32px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px;
-    line-height: 1;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform var(--transition-fast);
-    user-select: none;
+    display: none;
 }
 .cursor::after { content: '⭐'; }
 .cursor-follower {
@@ -285,4 +277,25 @@ body.dark-mode .cursor-follower {
     .btn             { width: 100%; justify-content: center; }
     .about__info     { grid-template-columns: 1fr; }
     .projects__container { grid-template-columns: 1fr; }
+}
+
+/* ── Star cursor trail ── */
+.star-trail {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    display: none;
+    clip-path: polygon(
+        50% 0%, 56% 38%, 100% 50%,
+        56% 62%, 50% 100%,
+        44% 62%, 0% 50%,
+        44% 38%
+    );
+    background: currentColor;
+    box-shadow:
+        0 0 8px  3px currentColor,
+        0 0 20px 8px currentColor,
+        0 0 35px 12px rgba(255, 215, 0, 0.5);
+    will-change: transform, opacity;
+    border-radius: 1px;
 }

@@ -1,0 +1,15 @@
+# star trail 
+Now bump the CSS glow to match:
+
+What changed:
+
+| | Before | After |
+|---|---|---|
+| Star size | 6–14px | 10–26px |
+| Lifetime | 900ms | 1400ms |
+| Fall distance | 40px | 70px |
+| Horizontal spread | ±30px | ±60px |
+| Density | 1 star / 30ms | 2 stars / 16ms |
+| Opacity curve | linear fade | power curve — stays bright longer |
+| Glow layers | 2 | 3 (inner + mid + wide bloom) |
+| Rotation | 180° | 270° |

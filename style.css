@@ -135,20 +135,7 @@ button {
 
 /* Golden sword custom cursor elements */
 .cursor {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    line-height: 1;
-    border-radius: 0;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform var(--transition-fast);
-    mix-blend-mode: normal;
-    user-select: none;
+    display: none;
 }
 .cursor::after { content: '⭐'; }
 
