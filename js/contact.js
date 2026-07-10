@@ -38,7 +38,8 @@ if (form) {
                 }),
             });
 
-            const json = await res.json();
+            let json = {};
+            try { json = await res.json(); } catch { /* non-JSON response */ }
 
             if (res.ok && json.success) {
                 result.textContent  = '✓ Message sent! I\'ll get back to you soon.';
