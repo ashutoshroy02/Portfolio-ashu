@@ -31,7 +31,7 @@ export function copyEmail(e, text) {
     Object.assign(toast.style, {
         position: 'fixed', bottom: '20px', left: '50%',
         transform: 'translateX(-50%)',
-        background: 'var(--primary-color, #C9A84C)', color: 'white',
+        background: 'var(--primary-color, #111111)', color: 'white',
         padding: '10px 20px', borderRadius: '5px',
         zIndex: '10000', transition: 'opacity 0.3s',
     });

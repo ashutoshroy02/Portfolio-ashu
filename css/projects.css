@@ -19,9 +19,9 @@
     transition: all var(--transition-base);
 }
 .filter-btn:hover, .filter-btn.active {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
-    transform: translateY(-2px);
+    background: var(--primary-color);
+    color: var(--bg-primary);
+    transform: translateY(-1px);
 }
 
 /* ── Project grid ── */
@@ -59,7 +59,7 @@
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(201,168,76,0.9);
+    background: rgba(0,0,0,0.75);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,7 @@
     width: 50px; height: 50px;
     border-radius: 50%;
     background: white;
-    color: var(--primary-color);
+    color: #111111;
     display: flex; align-items: center; justify-content: center;
     transition: all var(--transition-base);
 }
@@ -93,8 +93,9 @@
     background: var(--bg-secondary);
     border-radius: var(--radius-full);
     font-size: 0.85rem;
-    color: var(--primary-color);
+    color: var(--text-secondary);
     font-weight: 500;
+    border: 1px solid var(--glass-border);
 }
 
 /* ── Lightbox (legacy) ── */
@@ -201,10 +202,8 @@
 .pmodal__hero { max-width: 800px; margin: 0 auto 3rem; text-align: center; }
 .pmodal__hero h2 {
     font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
 }
 .pmodal__hero .pmodal__tagline { font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
 .pmodal__sections {
@@ -255,12 +254,12 @@
 }
 .pmodal__links .pmodal__github:hover { background: #333; color: white; }
 .pmodal__links .pmodal__casestudy {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-primary);
 }
 .pmodal__links .pmodal__casestudy:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(201,168,76,0.4);
+    box-shadow: var(--shadow-md);
 }
 
 /* Demo section */
@@ -327,10 +326,8 @@
 .csmodal__body { max-width: 700px; margin: 0 auto; }
 .csmodal__body h2 {
     font-size: 2.2rem; font-weight: 800; margin-bottom: 2rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
 }
 .cs__section {
     margin-bottom: 2.5rem;
@@ -353,7 +350,7 @@
 .cs__section p { color: var(--text-secondary); line-height: 1.8; }
 .cs__insight {
     padding: 1rem 1.25rem;
-    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(212,184,90,0.08));
+    background: var(--bg-secondary);
     border-left: 3px solid var(--primary-color);
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
     margin: 1rem 0;

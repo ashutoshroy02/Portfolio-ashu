@@ -223,9 +223,9 @@ setTimeout(() => {
 }, 3000);
 
 // ── Console Branding ──
-console.log('%cHello, Developer!', 'color: #C9A84C; font-size: 24px; font-weight: bold;');
+console.log('%cHello, Developer!', 'color: #111111; font-size: 24px; font-weight: bold;');
 console.log('%cThanks for checking out the code! Feel free to reach out if you want to collaborate.', 'color: #64748b; font-size: 14px;');
-console.log('%cBuilt with HTML, CSS, and JavaScript', 'color: #D4B85A; font-size: 12px;');
+console.log('%cBuilt with HTML, CSS, and JavaScript', 'color: #555555; font-size: 12px;');
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Portfolio website loaded successfully!');

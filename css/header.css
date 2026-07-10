@@ -45,8 +45,8 @@
     content: '';
     position: absolute;
     bottom: -0.5rem; left: 0;
-    width: 0; height: 2px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    width: 0; height: 1px;
+    background: var(--text-primary);
     transition: width var(--transition-base);
 }
 .nav__link:hover, .nav__link.active-link { color: var(--primary-color); }
@@ -71,7 +71,7 @@
 .theme-toggle:hover {
     transform: rotate(20deg) scale(1.1);
     background: var(--primary-color);
-    color: white;
+    color: var(--bg-primary);
 }
 
 .nav__toggle, .nav__close {

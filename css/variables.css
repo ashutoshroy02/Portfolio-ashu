@@ -1,41 +1,41 @@
 /* =============================================
-   DESIGN TOKENS — colors, typography, spacing
+   DESIGN TOKENS — Minimal Theme
    ============================================= */
 
 :root {
-    /* Brand colors */
-    --primary-color: #C9A84C;
-    --primary-dark:  #A8893A;
-    --primary-light: #D4B85A;
-    --accent-color:  #E8D48B;
-    --accent-dark:   #B89D3E;
+    /* Brand — single sharp accent */
+    --primary-color: #111111;
+    --primary-dark:  #000000;
+    --primary-light: #333333;
+    --accent-color:  #555555;
+    --accent-dark:   #222222;
 
     /* Text */
-    --text-primary:   #1a1a1a;
+    --text-primary:   #111111;
     --text-secondary: #555555;
-    --text-light:     #888888;
+    --text-light:     #999999;
 
-    /* Backgrounds */
-    --bg-primary:   #F5F0E8;
-    --bg-secondary: #EAE5DC;
-    --bg-tertiary:  #DDD8CF;
+    /* Backgrounds — pure, clean whites/greys */
+    --bg-primary:   #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary:  #e8e8e8;
 
-    /* Glassmorphism */
-    --glass-bg:     rgba(245, 240, 232, 0.6);
-    --glass-border: rgba(201, 168, 76, 0.15);
+    /* Glass — flat & light */
+    --glass-bg:     rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(0, 0, 0, 0.08);
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+    /* Shadows — subtle */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10);
+    --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.12);
 
     /* Typography */
     --font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-code:    'Courier New', monospace;
 
     /* Layout */
-    --header-height:  4.5rem;
+    --header-height:   4.5rem;
     --section-padding: 5rem 0;
 
     /* Transitions */
@@ -43,27 +43,33 @@
     --transition-base: 0.3s ease;
     --transition-slow: 0.5s ease;
 
-    /* Border radii */
-    --radius-sm:   0.5rem;
-    --radius-md:   1rem;
-    --radius-lg:   1.5rem;
+    /* Border radii — sharper for minimal feel */
+    --radius-sm:   0.25rem;
+    --radius-md:   0.5rem;
+    --radius-lg:   0.75rem;
     --radius-full: 9999px;
 }
 
 /* ── Dark mode overrides ── */
 body.dark-mode {
-    --text-primary:   #E8E4DC;
-    --text-secondary: #A09888;
-    --text-light:     #78706A;
+    --primary-color: #f0f0f0;
+    --primary-dark:  #ffffff;
+    --primary-light: #cccccc;
+    --accent-color:  #aaaaaa;
+    --accent-dark:   #888888;
 
-    --bg-primary:   #0D0D0D;
-    --bg-secondary: #161616;
-    --bg-tertiary:  #222222;
+    --text-primary:   #f0f0f0;
+    --text-secondary: #aaaaaa;
+    --text-light:     #666666;
 
-    --glass-bg:     rgba(13, 13, 13, 0.8);
-    --glass-border: rgba(201, 168, 76, 0.12);
+    --bg-primary:   #0a0a0a;
+    --bg-secondary: #141414;
+    --bg-tertiary:  #1e1e1e;
 
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+    --glass-bg:     rgba(10, 10, 10, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.07);
+
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.7);
 }

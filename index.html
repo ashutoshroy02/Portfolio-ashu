@@ -55,7 +55,7 @@
          position: fixed; top: 0; left: 0; 
          width: 100%; 
          height: 100%; 
-         background: #F5F0E8; 
+         background: #ffffff; 
          display: flex;
          align-items: center; 
          justify-content: center; 
@@ -65,8 +65,8 @@
         .loader { 
          width: 50px; 
          height: 50px; 
-         border: 4px solid #f1f5f9; 
-         border-top-color: #C9A84C; 
+         border: 4px solid #e8e8e8; 
+         border-top-color: #111111; 
          border-radius: 50%; 
          animation: spin 1s linear infinite; 
         }
@@ -81,7 +81,7 @@
         }
 
         body.dark-mode .loading-screen { 
-            background: #0D0D0D; 
+            background: #0a0a0a; 
         }
 
         body.dark-mode .header { 
@@ -143,9 +143,6 @@
                         <a href="#home" class="nav__link active-link">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#resume" class="nav__link">Resume</a>
-                    </li>
-                    <li class="nav__item">
                         <a href="#about" class="nav__link">About</a>
                     </li>
                     <li class="nav__item">
@@ -153,6 +150,9 @@
                     </li>
                     <li class="nav__item">
                         <a href="#skills" class="nav__link">Skills</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#resume" class="nav__link">Resume</a>
                     </li>
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">Contact</a>
@@ -228,101 +228,6 @@
         </div>
     </section>
 
-    <!-- ========== RESUME SECTION ========== -->
-    <section class="resume section" id="resume">
-        <div class="container">
-            <h2 class="section__title">My Resumes</h2>
-            <p class="section__subtitle">Tailored for different roles — preview and download</p>
-
-            <div class="resume__roles">
-                <button class="resume__role-btn active" data-role="ml" data-pdf="new_resume/ai_ml_engineer.pdf" id="resume-role-ml">
-                    <div class="resume__role-icon"><i class="fas fa-robot"></i></div>
-                    <div class="resume__role-info">
-                        <h3>AI/ML Engineer</h3>
-                        <p>LLMs, RAG, Transformers, PyTorch</p>
-                    </div>
-                </button>
-                <button class="resume__role-btn" data-role="ds" data-pdf="new_resume/Data_Scientist.pdf" id="resume-role-ds">
-                    <div class="resume__role-icon"><i class="fas fa-chart-bar"></i></div>
-                    <div class="resume__role-info">
-                        <h3>Data Scientist</h3>
-                        <p>Statistics, NLP, Pandas, Visualization</p>
-                    </div>
-                </button>
-                <button class="resume__role-btn" data-role="py" data-pdf="new_resume/software_developer.pdf" id="resume-role-py">
-                    <div class="resume__role-icon"><i class="fab fa-python"></i></div>
-                    <div class="resume__role-info">
-                        <h3>Python Developer</h3>
-                        <p>FastAPI, Backend, Automation, Docker</p>
-                    </div>
-                </button>
-                <button class="resume__role-btn" data-role="cv" data-pdf="new_resume/Researcher - nlp, cv , voice.pdf" id="resume-role-cv">
-                    <div class="resume__role-icon"><i class="fas fa-microscope"></i></div>
-                    <div class="resume__role-info">
-                        <h3>CV Researcher</h3>
-                        <p>OCR, Vision-Language, Signal Processing</p>
-                    </div>
-                </button>
-                <button class="resume__role-btn" data-role="ai" data-pdf="new_resume/Ai agent and Gen AI engineer.pdf" id="resume-role-ai">
-                    <div class="resume__role-icon"><i class="fas fa-brain"></i></div>
-                    <div class="resume__role-info">
-                        <h3>AI Agent Developer</h3>
-                        <p>LangGraph, MCP, Autonomous Agents</p>
-                    </div>
-                </button>
-                <button class="resume__role-btn" data-role="fs" data-pdf="new_resume/Full Stack Developer.pdf" id="resume-role-fs">
-                    <div class="resume__role-icon"><i class="fas fa-layer-group"></i></div>
-                    <div class="resume__role-info">
-                        <h3>Full Stack Developer</h3>
-                        <p>FastAPI, React, Next.js, Docker</p>
-                    </div>
-                </button>
-            </div>
-
-            <div class="resume__preview-container glass-card" id="resume-preview-container">
-                <div class="resume__preview-header">
-                    <h3 class="resume__preview-title" id="resume-preview-title">
-                        <i class="fas fa-file-pdf"></i> AI/ML Engineer Resume
-                    </h3>
-                    <div class="resume__preview-actions">
-                        <button class="btn btn-secondary resume__action-btn" id="resume-fullscreen-btn" aria-label="Fullscreen preview">
-                            <i class="fas fa-expand"></i> Fullscreen
-                        </button>
-                        <a href="new_resume/ai_ml_engineer.pdf" download class="btn btn-primary resume__action-btn" id="resume-download-btn">
-                            <i class="fas fa-download"></i> Download
-                        </a>
-                    </div>
-                </div>
-                <div class="resume__preview-frame">
-                    <iframe src="new_resume/ai_ml_engineer.pdf" id="resume-iframe" title="Resume Preview" loading="lazy"></iframe>
-                    <div class="resume__preview-fallback" id="resume-fallback" style="display:none;">
-                        <i class="fas fa-file-pdf"></i>
-                        <p>PDF preview not supported in this browser.</p>
-                        <a href="new_resume/ai_ml_engineer.pdf" download class="btn btn-primary">
-                            <i class="fas fa-download"></i> Download PDF Instead
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== RESUME FULLSCREEN MODAL ========== -->
-    <div class="resume__modal" id="resume-modal">
-        <div class="resume__modal-header">
-            <h3 id="resume-modal-title">AI/ML Engineer Resume</h3>
-            <div class="resume__modal-actions">
-                <a href="new_resume/ai_ml_engineer.pdf" download class="btn btn-primary" id="resume-modal-download">
-                    <i class="fas fa-download"></i> Download
-                </a>
-                <button class="resume__modal-close" id="resume-modal-close" aria-label="Close fullscreen">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-        <iframe src="" id="resume-modal-iframe" title="Resume Fullscreen Preview"></iframe>
-    </div>
-
     
     <section class="about section" id="about">
         <div class="container">
@@ -352,7 +257,7 @@
                         </p>
                         <h3 class="about__subtitle">Beyond the Code</h3>
                         <p class="about__description">
-                            Outside of AI development, my hobby is playing badminton. I also run a <a href="https://www.youtube.com/channel/UCk64HxDSenxzRgqNRUhBq3g/" target="_blank" style="color: #C9A84C; text-decoration: none; font-weight: 600;">YouTube channel</a> where I upload vlogs and random study tutorials. Additionally, I manage an Instagram page <a href="https://www.instagram.com/atrexplains/" target="_blank" style="color: #C9A84C; text-decoration: none; font-weight: 600;">@atrexplains</a> where I post about various useful websites and tech insights.
+                            Outside of AI development, my hobby is playing badminton. I also run a <a href="https://www.youtube.com/channel/UCk64HxDSenxzRgqNRUhBq3g/" target="_blank" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">YouTube channel</a> where I upload vlogs and random study tutorials. Additionally, I manage an Instagram page <a href="https://www.instagram.com/atrexplains/" target="_blank" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">@atrexplains</a> where I post about various useful websites and tech insights.
                         </p>
                         <a href="#resume" class="btn btn-primary download-cv">
                             <i class="fas fa-file-alt"></i> View Resumes
@@ -643,6 +548,101 @@
     </section>
 
 
+    <!-- ========== RESUME SECTION ========== -->
+    <section class="resume section" id="resume">
+        <div class="container">
+            <h2 class="section__title">My Resumes</h2>
+            <p class="section__subtitle">Tailored for different roles — preview and download</p>
+
+            <div class="resume__roles">
+                <button class="resume__role-btn active" data-role="ml" data-pdf="new_resume/ai_ml_engineer.pdf" id="resume-role-ml">
+                    <div class="resume__role-icon"><i class="fas fa-robot"></i></div>
+                    <div class="resume__role-info">
+                        <h3>AI/ML Engineer</h3>
+                        <p>LLMs, RAG, Transformers, PyTorch</p>
+                    </div>
+                </button>
+                <button class="resume__role-btn" data-role="ds" data-pdf="new_resume/Data_Scientist.pdf" id="resume-role-ds">
+                    <div class="resume__role-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="resume__role-info">
+                        <h3>Data Scientist</h3>
+                        <p>Statistics, NLP, Pandas, Visualization</p>
+                    </div>
+                </button>
+                <button class="resume__role-btn" data-role="py" data-pdf="new_resume/software_developer.pdf" id="resume-role-py">
+                    <div class="resume__role-icon"><i class="fab fa-python"></i></div>
+                    <div class="resume__role-info">
+                        <h3>Python Developer</h3>
+                        <p>FastAPI, Backend, Automation, Docker</p>
+                    </div>
+                </button>
+                <button class="resume__role-btn" data-role="cv" data-pdf="new_resume/Researcher - nlp, cv , voice.pdf" id="resume-role-cv">
+                    <div class="resume__role-icon"><i class="fas fa-microscope"></i></div>
+                    <div class="resume__role-info">
+                        <h3>CV Researcher</h3>
+                        <p>OCR, Vision-Language, Signal Processing</p>
+                    </div>
+                </button>
+                <button class="resume__role-btn" data-role="ai" data-pdf="new_resume/Ai agent and Gen AI engineer.pdf" id="resume-role-ai">
+                    <div class="resume__role-icon"><i class="fas fa-brain"></i></div>
+                    <div class="resume__role-info">
+                        <h3>AI Agent Developer</h3>
+                        <p>LangGraph, MCP, Autonomous Agents</p>
+                    </div>
+                </button>
+                <button class="resume__role-btn" data-role="fs" data-pdf="new_resume/Full Stack Developer.pdf" id="resume-role-fs">
+                    <div class="resume__role-icon"><i class="fas fa-layer-group"></i></div>
+                    <div class="resume__role-info">
+                        <h3>Full Stack Developer</h3>
+                        <p>FastAPI, React, Next.js, Docker</p>
+                    </div>
+                </button>
+            </div>
+
+            <div class="resume__preview-container glass-card" id="resume-preview-container">
+                <div class="resume__preview-header">
+                    <h3 class="resume__preview-title" id="resume-preview-title">
+                        <i class="fas fa-file-pdf"></i> AI/ML Engineer Resume
+                    </h3>
+                    <div class="resume__preview-actions">
+                        <button class="btn btn-secondary resume__action-btn" id="resume-fullscreen-btn" aria-label="Fullscreen preview">
+                            <i class="fas fa-expand"></i> Fullscreen
+                        </button>
+                        <a href="new_resume/ai_ml_engineer.pdf" download class="btn btn-primary resume__action-btn" id="resume-download-btn">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+                <div class="resume__preview-frame">
+                    <iframe src="new_resume/ai_ml_engineer.pdf" id="resume-iframe" title="Resume Preview" loading="lazy"></iframe>
+                    <div class="resume__preview-fallback" id="resume-fallback" style="display:none;">
+                        <i class="fas fa-file-pdf"></i>
+                        <p>PDF preview not supported in this browser.</p>
+                        <a href="new_resume/ai_ml_engineer.pdf" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download PDF Instead
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RESUME FULLSCREEN MODAL ========== -->
+    <div class="resume__modal" id="resume-modal">
+        <div class="resume__modal-header">
+            <h3 id="resume-modal-title">AI/ML Engineer Resume</h3>
+            <div class="resume__modal-actions">
+                <a href="new_resume/ai_ml_engineer.pdf" download class="btn btn-primary" id="resume-modal-download">
+                    <i class="fas fa-download"></i> Download
+                </a>
+                <button class="resume__modal-close" id="resume-modal-close" aria-label="Close fullscreen">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <iframe src="" id="resume-modal-iframe" title="Resume Fullscreen Preview"></iframe>
+    </div>
+
     
     <section class="contact section" id="contact">
         <div class="container">
@@ -691,10 +691,10 @@
                 <div class="footer__content">
                     <h3 class="footer__title">Quick Links</h3>
                     <ul class="footer__links">
-                        <li><a href="#resume" class="footer__link">Resume</a></li>
                         <li><a href="#about" class="footer__link">About</a></li>
                         <li><a href="#projects" class="footer__link">Projects</a></li>
                         <li><a href="#skills" class="footer__link">Skills</a></li>
+                        <li><a href="#resume" class="footer__link">Resume</a></li>
                         <li><a href="#contact" class="footer__link">Contact</a></li>
                     </ul>
                 </div>
@@ -776,7 +776,7 @@
             toast.style.bottom = '20px';
             toast.style.left = '50%';
             toast.style.transform = 'translateX(-50%)';
-            toast.style.background = 'var(--primary-color, #C9A84C)';
+            toast.style.background = 'var(--primary-color, #111111)';
             toast.style.color = 'white';
             toast.style.padding = '10px 20px';
             toast.style.borderRadius = '5px';

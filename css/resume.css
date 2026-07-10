@@ -27,31 +27,31 @@
     position: absolute;
     top: 0; left: -100%;
     width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.08), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.04), transparent);
     transition: left 0.5s ease;
 }
 .resume__role-btn:hover::before { left: 100%; }
 .resume__role-btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(201,168,76,0.15);
-    border-color: var(--primary-light);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
 }
 .resume__role-btn.active {
-    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(212,184,90,0.12));
+    background: var(--bg-secondary);
     border-color: var(--primary-color);
-    box-shadow: 0 4px 20px rgba(201,168,76,0.2);
+    box-shadow: var(--shadow-sm);
 }
 body.dark-mode .resume__role-btn { background: var(--bg-secondary); }
 body.dark-mode .resume__role-btn.active {
-    background: linear-gradient(135deg, rgba(201,168,76,0.2), rgba(212,184,90,0.2));
+    background: var(--bg-tertiary);
 }
 
 .resume__role-icon {
     width: 48px; height: 48px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 8px;
+    background: var(--primary-color);
     display: flex; align-items: center; justify-content: center;
-    color: white; font-size: 1.2rem;
+    color: var(--bg-primary); font-size: 1.2rem;
     flex-shrink: 0;
     transition: transform 0.3s ease;
 }

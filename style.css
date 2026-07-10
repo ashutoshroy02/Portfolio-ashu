@@ -1,42 +1,40 @@
 
 :root {
-    --primary-color: #C9A84C;
-    --primary-dark: #A8893A;
-    --primary-light: #D4B85A;
+    --primary-color: #111111;
+    --primary-dark:  #000000;
+    --primary-light: #333333;
+    --accent-color:  #555555;
+    --accent-dark:   #222222;
     
-    --accent-color: #E8D48B;
-    --accent-dark: #B89D3E;
-    
-    --text-primary: #1a1a1a;
+    --text-primary:   #111111;
     --text-secondary: #555555;
-    --text-light: #888888;
+    --text-light:     #999999;
     
-    --bg-primary: #F5F0E8;
-    --bg-secondary: #EAE5DC;
-    --bg-tertiary: #DDD8CF;
+    --bg-primary:   #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary:  #e8e8e8;
     
-    --glass-bg: rgba(245, 240, 232, 0.6);
-    --glass-border: rgba(201, 168, 76, 0.15);
+    --glass-bg:     rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(0, 0, 0, 0.08);
     
-    
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10);
+    --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.12);
     
     --font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-code: 'Courier New', monospace;
+    --font-code:    'Courier New', monospace;
     
-    --header-height: 4.5rem;
+    --header-height:   4.5rem;
     --section-padding: 5rem 0;
     
     --transition-fast: 0.2s ease;
     --transition-base: 0.3s ease;
     --transition-slow: 0.5s ease;
     
-    --radius-sm: 0.5rem;
-    --radius-md: 1rem;
-    --radius-lg: 1.5rem;
+    --radius-sm:   0.25rem;
+    --radius-md:   0.5rem;
+    --radius-lg:   0.75rem;
     --radius-full: 9999px;
 }
 
@@ -46,20 +44,26 @@
 
 
 body.dark-mode {
-    --text-primary: #E8E4DC;
-    --text-secondary: #A09888;
-    --text-light: #78706A;
+    --primary-color: #f0f0f0;
+    --primary-dark:  #ffffff;
+    --primary-light: #cccccc;
+    --accent-color:  #aaaaaa;
+    --accent-dark:   #888888;
     
-    --bg-primary: #0D0D0D;
-    --bg-secondary: #161616;
-    --bg-tertiary: #222222;
+    --text-primary:   #f0f0f0;
+    --text-secondary: #aaaaaa;
+    --text-light:     #666666;
     
-    --glass-bg: rgba(13, 13, 13, 0.8);
-    --glass-border: rgba(201, 168, 76, 0.12);
+    --bg-primary:   #0a0a0a;
+    --bg-secondary: #141414;
+    --bg-tertiary:  #1e1e1e;
     
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+    --glass-bg:     rgba(10, 10, 10, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.07);
+    
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.7);
 }
 
 * {
@@ -84,7 +88,7 @@ body {
     cursor: url('assets/cursor_sword.png') 4 4, auto;
 }
 
-/* Translucent satellite background */
+/* Subtle noise texture for minimal depth */
 body::before {
     content: '';
     position: fixed;
@@ -92,14 +96,13 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('assets/bg_satellite.png') center/cover no-repeat fixed;
-    opacity: 0.06;
+    background: none;
     z-index: -1;
     pointer-events: none;
 }
 
 body.dark-mode::before {
-    opacity: 0.08;
+    background: none;
 }
 
 a {
@@ -146,18 +149,18 @@ button {
 .cursor-follower {
     width: 40px;
     height: 40px;
-    border: 2px solid var(--primary-color);
+    border: 1.5px solid var(--text-primary);
     border-radius: 50%;
     background: transparent;
     position: fixed;
     pointer-events: none;
     z-index: 9999;
     transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease;
-    opacity: 0.4;
+    opacity: 0.2;
 }
 
 body.dark-mode .cursor-follower {
-    border-color: var(--primary-light);
+    border-color: var(--text-primary);
 }
 
 @media (max-width: 768px) {
@@ -217,14 +220,12 @@ body.dark-mode .cursor-follower {
     font-weight: 700;
     text-align: center;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
 }
 
 body.dark-mode .section__title {
-    filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.15));
+    color: var(--text-primary);
 }
 
 .section__subtitle {
@@ -235,10 +236,8 @@ body.dark-mode .section__title {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
+    font-weight: 800;
 }
 
 .glass-card {
@@ -283,14 +282,15 @@ body.dark-mode .glass-card {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
-    box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4);
+    background: var(--primary-color);
+    color: var(--bg-primary);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(201, 168, 76, 0.5), 0 0 15px rgba(201, 168, 76, 0.3);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: var(--primary-dark);
 }
 
 .btn-secondary {
@@ -363,8 +363,8 @@ body.dark-mode .glass-card {
     bottom: -0.5rem;
     left: 0;
     width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    height: 1px;
+    background: var(--text-primary);
     transition: width var(--transition-base);
 }
 
@@ -399,7 +399,7 @@ body.dark-mode .glass-card {
 .theme-toggle:hover {
     transform: rotate(20deg) scale(1.1);
     background: var(--primary-color);
-    color: white;
+    color: var(--bg-primary);
 }
 
 .nav__toggle,
@@ -465,7 +465,7 @@ body.dark-mode .glass-card {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(201, 168, 76, 0.1) 0%, rgba(212, 184, 90, 0.1) 100%);
+    background: none;
     z-index: -1;
 }
 
@@ -577,7 +577,7 @@ body.dark-mode .glass-card {
 
 .social-link:hover {
     background: var(--primary-color);
-    color: white;
+    color: var(--bg-primary);
     transform: translateY(-5px);
 }
 
@@ -618,8 +618,8 @@ body.dark-mode .glass-card {
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid var(--primary-color);
-    box-shadow: 0 0 30px rgba(201, 168, 76, 0.5);
+    border: 2px solid var(--bg-tertiary);
+    box-shadow: var(--shadow-lg);
     position: relative;
     z-index: 1;
 }
@@ -812,7 +812,7 @@ body.dark-mode .glass-card {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.08), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.04), transparent);
     transition: left 0.5s ease;
 }
 
@@ -822,14 +822,14 @@ body.dark-mode .glass-card {
 
 .resume__role-btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(201, 168, 76, 0.15);
-    border-color: var(--primary-light);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
 }
 
 .resume__role-btn.active {
-    background: linear-gradient(135deg, rgba(201, 168, 76, 0.12), rgba(212, 184, 90, 0.12));
+    background: var(--bg-secondary);
     border-color: var(--primary-color);
-    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.2);
+    box-shadow: var(--shadow-sm);
 }
 
 body.dark-mode .resume__role-btn {
@@ -837,18 +837,18 @@ body.dark-mode .resume__role-btn {
 }
 
 body.dark-mode .resume__role-btn.active {
-    background: linear-gradient(135deg, rgba(201, 168, 76, 0.2), rgba(212, 184, 90, 0.2));
+    background: var(--bg-tertiary);
 }
 
 .resume__role-icon {
     width: 48px;
     height: 48px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 8px;
+    background: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--bg-primary);
     font-size: 1.2rem;
     flex-shrink: 0;
     transition: transform 0.3s ease;
@@ -1051,9 +1051,9 @@ body.dark-mode .resume__role-btn.active {
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
-    transform: translateY(-2px);
+    background: var(--primary-color);
+    color: var(--bg-primary);
+    transform: translateY(-1px);
 }
 
 .projects__container {
@@ -1112,7 +1112,7 @@ body.dark-mode .resume__role-btn.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(201, 168, 76, 0.9);
+    background: rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1130,7 +1130,7 @@ body.dark-mode .resume__role-btn.active {
     height: 50px;
     border-radius: 50%;
     background: white;
-    color: var(--primary-color);
+    color: #111111;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1280,7 +1280,7 @@ body.dark-mode .resume__role-btn.active {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.04), transparent);
     transition: left 0.5s ease;
 }
 
@@ -1294,7 +1294,7 @@ body.dark-mode .resume__role-btn.active {
 
 .skill-card:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(201, 168, 76, 0.3);
+    box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
 }
 
@@ -1328,7 +1328,7 @@ body.dark-mode .skill-card {
 }
 
 body.dark-mode .skill-card:hover {
-    box-shadow: 0 10px 30px rgba(201, 168, 76, 0.5);
+    box-shadow: var(--shadow-lg);
 }
 
 
@@ -1438,7 +1438,7 @@ body.dark-mode .skill-card:hover {
 .form__input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
 }
 
 .form__textarea {
