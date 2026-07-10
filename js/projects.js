@@ -15,6 +15,7 @@ export const projectsData = [
         contribution: 'Sole researcher — designed architecture, built preprocessing pipeline (VAD, silence removal, log-Mel spectrograms), trained and evaluated all models. First author on accepted paper.',
         results: '85.9% accuracy, 0.856 F1 score, RMSE 0.1268. Paper accepted at RECCAP 2026, IIT Palakkad. Outperformed SVM, Random Forest, and CNN baselines.',
         github: 'https://github.com/ashutoshroy02/emotion-stress-ml',
+        live: 'https://huggingface.co/ashutoshroy02/hybrid-wave2vec-LSTM-emotion-stress-RAVDESS',
         hasCaseStudy: true,
         caseStudy: {
             intro: 'Speech carries rich paralinguistic information beyond words. This project explores whether a single model can simultaneously understand both discrete emotion categories and continuous stress levels from raw audio.',
@@ -55,6 +56,12 @@ export const projectsData = [
         contribution: 'Sole developer. Designed ingestion pipeline, vector indexing, LangGraph agent loops, Groq API inference. Deployed Streamlit frontend + FastAPI backend.',
         results: '~40% hallucination reduction. Sub-second retrieval. Supports 3 input modalities. Multi-step reasoning for complex queries.',
         github: 'https://github.com/ashutoshroy02/Exam-Helper',
+        live: 'https://good-boy.streamlit.app/',
+        hasCaseStudy: false,
+    },
+    {
+        id: 4,
+        title: 'Medical Chatbot (LLM)',
         tagline: 'Fine-tuned LLM for healthcare NLP with OCR integration',
         problem: 'Healthcare providers spend significant time interpreting unstructured medical reports. Patients wait longer for query resolution due to manual processes.',
         solution: 'Fine-tuned Mistral 7B via QLoRA (4-bit quantization) for medical NLU. Built Tesseract OCR pipeline to extract structured data from clinical report images for downstream inference.',
@@ -62,6 +69,12 @@ export const projectsData = [
         contribution: 'Built complete pipeline: OCR → text structuring → fine-tuned LLM inference → API deployment. Reduced compute cost vs. full fine-tuning while preserving accuracy.',
         results: '~40% reduction in query resolution time. QLoRA cut GPU memory ~75% vs. full fine-tune. Processed 1,000+ unstructured medical reports.',
         github: 'https://github.com/ashutoshroy02/Medical-chatbot',
+        live: 'https://huggingface.co/fhai50032/BeagleLake-7B',
+        hasCaseStudy: false,
+    },
+    {
+        id: 5,
+        title: 'Industrial Defect Detection',
         tagline: 'Real-time computer vision for automated quality inspection',
         problem: 'Manual visual inspection in manufacturing is slow, inconsistent, and misses defects under varying lighting — causing quality failures at scale.',
         solution: 'Fine-tuned YOLOv8 on custom annotated industrial dataset covering 4 defect types. GPU-accelerated inference pipeline with augmentation for lighting robustness. Automated reporting and analytics dashboard.',
@@ -69,6 +82,11 @@ export const projectsData = [
         contribution: 'Built end-to-end: dataset collection and annotation (4 defect classes), YOLOv8 fine-tuning, CUDA inference pipeline, defect reporting and visualization module.',
         results: 'High detection accuracy on custom dataset. Real-time low-latency GPU inference. Automated defect reporting replacing manual inspection effort.',
         github: 'https://github.com/ashutoshroy02/Industrial-Defect-Detection-System',
+        hasCaseStudy: false,
+    },
+    {
+        id: 6,
+        title: 'Skills-for-Agents',
         tagline: 'Open-source modular instruction ecosystem for multi-task LLM agents',
         problem: 'Multi-task LLM agents hit instruction conflicts when multiple skills (voice, density, craft) run concurrently — no standard protocol exists to resolve domain ownership.',
         solution: 'Built production-ready modular skill system where each skill owns exactly one domain. Designed Skills Interoperability Protocol (SIP) to resolve conflicts, enable shared memory, and allow composable tool calling across agents.',
@@ -76,6 +94,11 @@ export const projectsData = [
         contribution: 'Sole architect. Designed SIP conflict resolution protocol, built 10+ modular skills, implemented shared memory and tool calling interfaces. Open-sourced for community use.',
         results: '~60% reduction in prompt duplication. Conflict-free concurrent multi-skill execution. Reusable across different agent architectures.',
         github: 'https://github.com/ashutoshroy02/skills-for-agents',
+        hasCaseStudy: false,
+    },
+    {
+        id: 7,
+        title: 'Shopping Assistant Agent',
         tagline: 'Multi-agent LangGraph system for automated product search and recommendations',
         problem: 'Users waste time searching, comparing, and evaluating products across multiple sources — no unified intelligent assistant exists for the full shopping workflow.',
         solution: 'Multi-agent system using LangGraph orchestrating specialized agents for product search, comparison, review summarization, and recommendations. MCP servers for secure tool calling with product APIs.',
@@ -83,6 +106,11 @@ export const projectsData = [
         contribution: 'Built orchestration layer, MCP server integrations, agent reasoning loops, and recommendation pipeline.',
         results: '~35% faster response time vs. single-agent baseline. Improved recommendation quality through multi-agent reasoning.',
         github: 'https://github.com/ashutoshroy02/shopping-assistant-agent-',
+        hasCaseStudy: false,
+    },
+    {
+        id: 8,
+        title: 'InterviewPrep Platform',
         tagline: 'Open-source AI/ML interview prep with 700+ curated questions',
         problem: 'No single free resource covers AI/ML interview prep comprehensively — especially for FAANG-level ML, LLM, RAG, and CV questions with structured study paths.',
         solution: 'Built full-stack platform (FastAPI + SQLite backend, then rebuilt as SEO-optimized static Astro site). 700+ curated questions across Python, ML, DL, NLP, LLMs, RAG, CV, SQL, HR. Company-specific tracks, 12-week roadmap, flashcards, mock interviews.',
@@ -90,6 +118,12 @@ export const projectsData = [
         contribution: 'Solo built both iterations — backend API platform (2025) and open-source static rebuild (2026). All content curation, platform design, and SEO optimization.',
         results: '95+ Lighthouse performance score. FAANG + Indian IT company tracks. Light/dark mode, schema markup, fully responsive.',
         github: 'https://github.com/ashutoshroy02/InterviewPrep',
+        live: 'https://interview-prep-lac.vercel.app/',
+        hasCaseStudy: false,
+    },
+    {
+        id: 9,
+        title: 'BulkyMail',
         tagline: 'Automated bulk email tool with dynamic personalization',
         problem: 'Sending 100+ personalized outreach emails manually takes hours — generic bulk tools lack per-recipient personalization (name, role, company) that drives responses.',
         solution: 'Streamlit app with dynamic templating engine supporting name/role/company variables. SMTP/API integration for reliable delivery at scale. Used for internship outreach campaigns.',
@@ -97,6 +131,12 @@ export const projectsData = [
         contribution: 'Built complete tool. Designed template engine, SMTP integration, and Streamlit UI.',
         results: '100+ personalized emails in minutes. Contributed to successful internship conversions for multiple users.',
         github: 'https://github.com/ashutoshroy02/BULK-MAIL',
+        live: 'https://bulkymail.streamlit.app/',
+        hasCaseStudy: false,
+    },
+    {
+        id: 10,
+        title: 'URL Shortener',
         tagline: 'Scalable URL shortener with Redis caching and analytics',
         problem: 'Standard URL shorteners lack caching — high traffic causes slow response times and poor scalability.',
         solution: 'REST API with custom short links, Redis caching layer, and analytics. PostgreSQL for persistence, Docker for deployment.',
@@ -104,6 +144,11 @@ export const projectsData = [
         contribution: 'Built full backend: REST API design, Redis caching layer, analytics module, Docker containerization.',
         results: '~40% response time reduction via Redis cache. Production-ready with Docker deployment.',
         github: 'https://github.com/ashutoshroy02/Chota-link',
+        hasCaseStudy: false,
+    },
+    {
+        id: 11,
+        title: 'Netflix Data Analysis',
         tagline: 'EDA on 8,000+ Netflix titles for content trend insights',
         problem: 'Raw Netflix catalogue data lacks structure for business insight — genre trends, rating patterns, regional content gaps are not visible without systematic analysis.',
         solution: 'Cleaned and analyzed 8,000+ title dataset. Built visualizations identifying trends in genres, ratings, countries, release years. Enhanced open-source base project with deeper analysis.',
@@ -111,6 +156,11 @@ export const projectsData = [
         contribution: 'Data cleaning, EDA, visualization design, and business insight extraction.',
         results: 'Comprehensive trend analysis across genre, geography, ratings, and time. Visualizations suitable for data-driven content strategy.',
         github: 'https://github.com/ashutoshroy02/Netflix-Data-Analysis',
+        hasCaseStudy: false,
+    },
+    {
+        id: 12,
+        title: 'BeatBubble — Music Identification',
         tagline: 'Real-time audio fingerprinting for instant song recognition',
         problem: 'Identifying songs playing in noisy environments requires robust audio fingerprinting that works with short, low-quality audio snippets.',
         solution: 'Built end-to-end pipeline: audio capture → feature extraction → ACRCloud API fingerprinting → metadata retrieval. Cross-platform UI via Streamlit and Flutter.',
@@ -118,6 +168,7 @@ export const projectsData = [
         contribution: 'Sole developer. Designed audio capture pipeline, integrated ACRCloud fingerprinting API, built cross-platform UI for both web and mobile.',
         results: 'Real-time identification in under 3 seconds. Works with ambient noise. Cross-platform deployment.',
         github: 'https://github.com/ashutoshroy02/Beat-Bubble',
+        live: 'https://beatbubblefind.streamlit.app/',
         hasDemo: true,
         hasCaseStudy: false,
     },
@@ -216,6 +267,10 @@ function renderProjectModal(idx) {
         ? `<a href="#" class="pmodal__casestudy" onclick="openCaseStudy(${idx}); return false;"><i class="fas fa-book-open"></i> View Case Study</a>`
         : '';
 
+    const liveLink = p.live
+        ? `<a href="${p.live}" target="_blank" rel="noopener" class="pmodal__live"><i class="fas fa-external-link-alt"></i> Live / Model</a>`
+        : '';
+
     if (pModalBody) {
         pModalBody.innerHTML = `
         <div class="pmodal__hero">
@@ -248,6 +303,7 @@ function renderProjectModal(idx) {
                 <h3><i class="fas fa-external-link-alt"></i> Links</h3>
                 <div class="pmodal__links">
                     <a href="${p.github}" target="_blank" rel="noopener" class="pmodal__github"><i class="fab fa-github"></i> GitHub</a>
+                    ${liveLink}
                     ${caseStudyLink}
                 </div>
             </div>
