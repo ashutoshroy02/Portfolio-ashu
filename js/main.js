@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
 });
 
 // ── Theme Toggle ──
-const currentTheme = localStorage.getItem('theme') || 'dark';
+const currentTheme = localStorage.getItem('theme') || 'light';
 if (currentTheme === 'dark') {
     document.body.classList.add('dark-mode');
     if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
