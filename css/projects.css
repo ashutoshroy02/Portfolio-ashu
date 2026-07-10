@@ -372,3 +372,24 @@
     font-size: 3.5rem;
     opacity: 0.4;
 }
+
+/* ── Freelance client badge ── */
+.project__client-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #92400e;
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+}
+
+body.dark-mode .project__client-badge {
+    color: #fde68a;
+    background: rgba(251, 191, 36, 0.12);
+    border-color: rgba(251, 191, 36, 0.3);
+}
