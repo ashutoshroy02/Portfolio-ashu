@@ -834,20 +834,20 @@
     <section class="contact section" id="contact">
         <div class="container">
             <h2 class="section__title">Get In Touch</h2>
-            <p class="section__subtitle">Let's work together</p>
+            <p class="section__subtitle">Drop a message — no email needed, just say hi</p>
 
-            <div class="contact__container" style="display: flex; justify-content: center;">
-                <div class="contact__info" style="flex-direction: row; flex-wrap: wrap; justify-content: center; width: 100%;">
-                    <div class="contact__card glass-card" style="flex: 1; min-width: 280px; max-width: 350px;">
+            <div class="contact__layout">
+                <!-- Info cards -->
+                <div class="contact__info-row">
+                    <div class="contact__card glass-card">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
                         <p>ashu2003roy@gmail.com</p>
-                        <a href="mailto:ashu2003roy@gmail.com" target="_blank" rel="noopener noreferrer" onclick="copyEmail(event, 'ashu2003roy@gmail.com');" class="contact__button">
+                        <a href="mailto:ashu2003roy@gmail.com" onclick="copyEmail(event, 'ashu2003roy@gmail.com');" class="contact__button">
                             Send Email <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
-
-                    <div class="contact__card glass-card" style="flex: 1; min-width: 280px; max-width: 350px;">
+                    <div class="contact__card glass-card">
                         <i class="fab fa-whatsapp"></i>
                         <h3>WhatsApp</h3>
                         <p>+91 98105 99837</p>
@@ -855,8 +855,30 @@
                             Message Me <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
-
                 </div>
+
+                <!-- Anonymous contact form -->
+                <form class="contact__form glass-card" id="contact-form" novalidate>
+                    <h3 class="contact__form-title">Send an anonymous message</h3>
+                    <p class="contact__form-note">No email required. I'll get it directly.</p>
+
+                    <div class="form__group">
+                        <label class="form__label" for="contact-name">Name <span style="color:var(--text-light); font-weight:400;">(optional)</span></label>
+                        <input type="text" id="contact-name" class="form__input" placeholder="Anonymous" maxlength="80" autocomplete="off">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="contact-message">Message <span style="color:#ef4444;">*</span></label>
+                        <textarea id="contact-message" class="form__input form__textarea" placeholder="Say something..." rows="5" maxlength="2000" required></textarea>
+                        <span class="form__error" id="contact-msg-error" style="display:none;">Please write a message.</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="contact-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+
+                    <div class="form__message" id="contact-result" style="display:none;"></div>
+                </form>
             </div>
         </div>
     </section>
@@ -993,5 +1015,7 @@
     <script src="script.js"></script>
     <!-- Star cursor trail -->
     <script src="js/startrail.js"></script>
+    <!-- Contact form -->
+    <script type="module" src="js/contact.js"></script>
 </body>
 </html>

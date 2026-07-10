@@ -217,3 +217,45 @@ body.dark-mode .form__message.error { background: #7f1d1d; color: #fca5a5; }
     0%, 100% { transform: scale(1); }
     50%       { transform: scale(1.2); }
 }
+
+/* ── Contact layout (new) ── */
+.contact__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.contact__info-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact__info-row .contact__card {
+    flex: 1;
+    min-width: 220px;
+}
+
+.contact__form {
+    padding: 2rem 2.5rem;
+}
+
+.contact__form-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.contact__form-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1.75rem;
+}
+
+@media screen and (max-width: 576px) {
+    .contact__info-row { flex-direction: column; }
+    .contact__form { padding: 1.5rem; }
+}
